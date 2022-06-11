@@ -22,7 +22,7 @@ const Rate = () => {
     return (
         <div>
             <button onClick={evaluate}>Rate</button>
-            {login && <select>{rates.map(rate=> <option>{rate}</option>)}</select>}
+            {login && <select>{rates.map(rate=> <option key={rate}>{rate}</option>)}</select>}
         </div>
     );
 };
