@@ -15,10 +15,7 @@ body {
     padding: 20px 5% 30px;
     box-sizing: border-box;
 }
-* {
-    /*overflow: hidden;*/
 
-}
 ::-webkit-scrollbar {
     width: 0;
 }
