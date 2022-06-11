@@ -1,0 +1,10 @@
+.actor_page * {
+    margin: 10px;
+}
+.actor_page{
+    display: flex;
+    align-items: center;
+}
+img{
+    border-radius: 10px;
+}

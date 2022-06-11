@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import {Route, Routes, Navigate} from "react-router-dom";
+
+import {MainLayaut} from "./Layouts";
+import {ActorsPage, HomePage, MoviesPage, NotFoungPage, SingleMoviePage, SingleActorPage, LoginPage} from "./Pages";
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <Routes>
+            <Route path={'/'} element={<MainLayaut/>}>
+                <Route index element={<Navigate to={'home'}/>}/>
+                <Route path={'home'} element={<HomePage/>}/>
+                <Route path={'movies'} element={<MoviesPage/>}>
+                    <Route path={':movieId'} element={<SingleMoviePage/>}/>
+                </Route>
+                <Route path={'actors'} element={<ActorsPage/>}><Route path={':actorId'} element={<SingleActorPage/>}/></Route>
+                <Route path={'login'} element={<LoginPage/>}/>
+                <Route path={'*'} element={<NotFoungPage/>}/>
+            </Route>
+        </Routes>
+    );
 }
 
 export default App;

@@ -1,0 +1,32 @@
+
+.average{
+    position: relative;
+    top: 32px;
+    color: #ff8000;
+    font-size: 25px;
+    left: 5px;
+}
+.card_wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: 280px;
+}
+.poster {
+    width: 130px;
+    border-radius: 10px;
+    margin: 5px;
+
+}
+.title {
+    color: wheat;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+}
+.poster_Card :hover{
+    box-shadow: 0px 0px 8px 5px white;
+    transition: 0.5s;
+}
+

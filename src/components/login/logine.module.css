@@ -1,0 +1,26 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+input {
+    border-radius: 7px;
+    height: 22px;
+    background: none;
+    margin: 3px 0px ;
+}
+button{
+    margin: 10px 60px;
+    background: wheat;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    width: 50px;
+    height: 20px;
+}
+.btn_LogOut{
+    width: 200px;
+    height: 80px;
+}
