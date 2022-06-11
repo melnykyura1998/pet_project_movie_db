@@ -20,7 +20,7 @@ export const genresList = [{"id":28,"name":"Action"},
 
 export const Genre = ({genre_ids})=>{
     const moviGenre =[]
-    genre_ids.map(id => { moviGenre.push(genresList.filter(genresListId=>genresListId.id === id))})
+    genre_ids.map(id =>  moviGenre.push(genresList.filter(genresListId=>genresListId.id === id)))
     return(
         <div>
             <b>genres:</b> {moviGenre.map(genre=><span key={genre[0].id}>{`${genre[0].name} `}</span>)}

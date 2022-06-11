@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {useSearchParams} from "react-router-dom";
 
 import {Movie,Pagination} from "../index";
@@ -18,7 +18,7 @@ const Movies = () => {
        if(!movieByQuery) {
             movieServices.getAll(query.get('page')).then(({data}) => setMoviesValue(data.results))
         }
-    },[])
+    },[query,movieByQuery])
 
     useEffect(() => {
         if (moviesTrigger === 'popular') {
