@@ -37,7 +37,7 @@ const HomeContent = ({trends}) => {
                     <div className={classes.home_wrapper}>
                         <ArrowBackIosIcon fontSize={'large'} onClick={dec}/>
                         <div className={classes.img_wrapper}>
-                            <img onClick={toMovie} className={classes.img} src={`http://image.tmdb.org/t/p/w500${backdrop_path}`}
+                            <img onClick={toMovie} className={classes.img} src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
                                  alt={original_title}/>
                             <div className={classes.title}>{original_title}</div>
                         </div>
