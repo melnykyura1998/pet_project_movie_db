@@ -3,7 +3,7 @@
     border-radius: 10px;
 }
 .poster_card :hover{
-    box-shadow: 0px 0px 8px 5px white;
+    box-shadow: 0 0 8px 5px white;
     transition: 0.5s;
 }
 .card_wrap{

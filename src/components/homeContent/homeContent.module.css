@@ -17,7 +17,7 @@
 .img {
     height: 500px;
     border-radius: 10px;
-    box-shadow: black 0px 0px 10px 2px;
+    box-shadow: black 0 0 9px 2px;
 }
 
 .img_wrapper {
@@ -30,7 +30,7 @@
 
 }
 h1{
-    margin: 0px 50px 20px;
+    margin: 0 50px 20px;
 
 }
 .wrapper{
