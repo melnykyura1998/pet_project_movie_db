@@ -7,7 +7,7 @@ const MenyGenres = ({submitMovie}) => {
 
     return (
         <div>
-            {genresList.map(genre=><li onClick={()=>submitMovie({trigger:'genre',genreId:genre.id})}>{genre.name}</li>)}
+            {genresList.map(genre=><li key={genre.id} onClick={()=>submitMovie({trigger:'genre',genreId:genre.id})}>{genre.name}</li>)}
         </div>
     );
 };
