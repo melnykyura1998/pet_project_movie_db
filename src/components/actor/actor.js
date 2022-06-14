@@ -1,18 +1,16 @@
 import React from 'react';
-import {useDispatch} from "react-redux";
+
 import {useNavigate} from "react-router-dom";
 
 import classes from "./actor.module.css";
-import {actorsActions} from "../../Redax";
 import {Loader} from "../../UI";
 
 
 const Actor = ({actor}) => {
-    const dispatch = useDispatch();
     const navigate = useNavigate();
     const {name,profile_path,id:actorId} = actor;
     const toActor = () => {
-        dispatch(actorsActions.getId({id:actorId}));
+
         navigate(actorId.toString());
     };
     return (

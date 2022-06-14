@@ -3,7 +3,7 @@ import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import {movieServices} from "../../services/movie.services";
 
 const initialState = {
-    // movies: [],
+    // Allmovies: '',
     // movieDetailRequest: {},
     // movieByQuery: '',
     // topRated: [],
@@ -11,6 +11,7 @@ const initialState = {
     genreId:'',
     login:'',
     status:'',
+    // previousPage: '1'
 }
 const getByQuery = createAsyncThunk(
     'moviesSlice/getByQuery',
@@ -54,9 +55,10 @@ const moviesSlice = createSlice({
         extraReducers: (builder) => {
             builder
                 // .addCase(getAllMovies.fulfilled, (state, actions) => {
-                //     const {results, page} = actions.payload;
-                //     state.movies = results;
-                //     state.page = page;
+                //     const {results,page} = actions.payload;
+                //     state.Allmovies = results;
+                //     // state.previousPage = page;
+                //     // console.log(results)
                 // })
                 // .addCase(getMovieById.fulfilled, (state, actions) => {
                 //     const movieDetail = actions.payload;

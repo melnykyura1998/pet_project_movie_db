@@ -8,8 +8,10 @@ const HomePage = () => {
     const [trends,setTrends] = useState();
 
     useEffect(()=>{
-        HomeService.getTrending().then(({data})=>setTrends(data.results));
-    },[])
+       if(!trends) {
+            HomeService.getTrending().then(({data}) => setTrends(data.results));
+        }
+    },[trends])
 
     return (
         <div className={'page_wrapper'}>

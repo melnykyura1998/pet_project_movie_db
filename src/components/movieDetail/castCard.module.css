@@ -20,7 +20,7 @@
 }
 .movieDetail_wrap{
     display: flex;
-    align-items: center;
+    align-items: end;
     margin-bottom: 30px;
 }
 img{
@@ -46,3 +46,16 @@ select option{
      background-color: #413c3c;
      color: wheat;
  }
+.video_vrapper{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.video_vrapper > *{
+    margin: 10px;
+}
+iframe{
+    border: none;
+}

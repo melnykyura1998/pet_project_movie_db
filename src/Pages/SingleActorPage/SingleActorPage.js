@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import {useSelector} from "react-redux";
+
 
 import {actorsService} from "../../services/actors.service";
 import {SingleActor} from "../../components/singleActor/singleActor";
 import {Loader} from "../../UI";
+import {useParams} from "react-router-dom";
 
 const SingleActorPage = () => {
 
-    const {actorId} = useSelector(state => state.actors);
     const [actor,setActor] = useState();
-
+    const {actorId} = useParams();
     useEffect(()=>{
         if(actorId){
             actorsService.getById(actorId).then(({data})=>setActor(data));

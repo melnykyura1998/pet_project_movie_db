@@ -1,10 +1,23 @@
 .actor_page * {
     margin: 10px;
 }
-.actor_page{
+
+.actor_page {
     display: flex;
     align-items: center;
 }
-img{
+
+img {
     border-radius: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+    align-items: center
+}
+h3{
+    margin: 25px;
 }

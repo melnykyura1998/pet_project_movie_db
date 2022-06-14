@@ -20,13 +20,12 @@ const actorsSlice = createSlice({
     name:'actorsSlice',
     initialState,
     reducers:{
-        getId:(state,actions)=>{
-            const {id} = actions.payload;
-            state.actorId = id;
-        },
+        // getId:(state,actions)=>{
+        //     const {id} = actions.payload;
+        //     state.actorId = id;
+        // },
         pagination:(state,actions)=>{
-            const data = actions.payload;
-            state.pagination = data;
+            state.pagination = actions.payload;
         }
     },
     extraReducers:(builder =>{

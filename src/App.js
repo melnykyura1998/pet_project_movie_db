@@ -16,7 +16,9 @@ function App() {
                 <Route path={'movies'} element={<MoviesPage/>}>
                     <Route path={':movieId'} element={<SingleMoviePage/>}/>
                 </Route>
-                <Route path={'actors'} element={<ActorsPage/>}><Route path={':actorId'} element={<SingleActorPage/>}/></Route>
+                <Route path={'actors'} element={<ActorsPage/>}>
+                    <Route path={':actorId'} element={<SingleActorPage/>}/>
+                </Route>
                 <Route path={'login'} element={<LoginPage/>}/>
                 <Route path={'*'} element={<NotFoungPage/>}/>
             </Route>
