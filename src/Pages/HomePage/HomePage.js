@@ -9,7 +9,7 @@ const HomePage = () => {
 
     useEffect(()=>{
        if(!trends) {
-            HomeService.getTrending().then(({data}) => setTrends(data.results.slice(0,5).filter(item => item.backdrop_path)));
+            HomeService.getTrending().then(({data}) => setTrends(data.results.filter(item => item.backdrop_path)));
         }
     },[trends])
 

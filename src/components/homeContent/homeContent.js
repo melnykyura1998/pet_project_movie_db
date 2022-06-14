@@ -9,7 +9,7 @@ const HomeContent = ({trends}) => {
     const navigate = useNavigate();
 
     const dec = () => {
-        if (counter !== 19) {
+        if (counter !== trends.length-1) {
             setCounter(+counter + 1);
         } else {
             setCounter(0);
@@ -20,11 +20,12 @@ const HomeContent = ({trends}) => {
         if (counter !== 0) {
             setCounter(+counter - 1);
         } else {
-            setCounter(19);
+            setCounter(trends.length-1);
         }
     }
 
     const {backdrop_path, original_title, id:movieId} = trends[counter];
+    console.log(trends[counter])
 
     const toMovie=()=>{
         navigate(`/movies/${movieId}`)
