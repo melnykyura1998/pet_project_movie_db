@@ -4,7 +4,7 @@ import {Route, Routes, Navigate} from "react-router-dom";
 import {MainLayaut} from "./Layouts";
 import {ActorsPage, HomePage, MoviesPage, NotFoungPage, SingleMoviePage, SingleActorPage, LoginPage} from "./Pages";
 
-//    "start": "node server.js",
+// "start": "react-scripts start",
 
 function App() {
 
