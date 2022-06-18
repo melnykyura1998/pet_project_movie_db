@@ -6,7 +6,7 @@ const initialState={
     actorId:'',
     actorsByQuery:'',
     status:'',
-    pagination:''
+    // pagination:''
 }
 
 const GetByQuery = createAsyncThunk(
@@ -24,9 +24,9 @@ const actorsSlice = createSlice({
         //     const {id} = actions.payload;
         //     state.actorId = id;
         // },
-        pagination:(state,actions)=>{
-            state.pagination = actions.payload;
-        }
+        // pagination:(state,actions)=>{
+        //     state.pagination = actions.payload;
+        // }
     },
     extraReducers:(builder =>{
         builder

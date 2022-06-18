@@ -27,7 +27,7 @@ const MovieDetail = ({movieDetail}) => {
                     <Rate/>
                 </div>
             </div>
-            <div >
+            <div>
                 <Getvideo id={id}/>
             </div>
             <div>

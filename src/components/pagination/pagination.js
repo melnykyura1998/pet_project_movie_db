@@ -2,16 +2,16 @@
 import {ArrowBackIosIcon, ArrowForwardIosIcon} from "../../UI";
 import classes from "./pagination.module.css";
 
-const Pagination = ({setQuery,query}) => {
+const Pagination = ({setQuery,query,numberPages}) => {
     const curentPage = +query.get('page');
     const pages = [];
 
-    if(curentPage<11){
-        for(let i=1; i<11;i++){
+    if(curentPage<=numberPages){
+        for(let i=1; i<=numberPages;i++){
             pages.push(+i);
         }
     }else{
-        for (let i = curentPage-9;i<=curentPage;i++){
+        for (let i = curentPage-numberPages+1;i<=curentPage;i++){
             pages.push(+i);
         }
     }

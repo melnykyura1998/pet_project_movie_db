@@ -96,11 +96,24 @@ const Movies = () => {
         <div>
             {status && <h1>{status}</h1>}
             {moviesValue && moviesValue.length === 0 && <h1>Movie not found</h1>}
-            {moviesTrigger !== 'query' ? <Pagination setQuery={setQuery} query={query}/> : ''}
-            <div className={classes.poster_card}>
-                {moviesValue ? moviesValue.map(movie => <Movie key={movie.id} movie={movie}/>) : <Loader/>}
+            <div className={classes.desktop}>{moviesTrigger !== 'query' ?
+                <Pagination setQuery={setQuery} query={query} numberPages={10}/> : ''}
             </div>
-            {moviesTrigger !== 'query' ? <Pagination setQuery={setQuery} query={query}/> : ''}
+            <div className={classes.mobile}>{moviesTrigger !== 'query' ?
+                <Pagination setQuery={setQuery} query={query} numberPages={5}/> : ''}
+            </div>
+            <div className={classes.wrapper}>
+                <div className={classes.movies}>
+                    {moviesValue ? moviesValue.map(movie => <Movie key={movie.id} movie={movie}/>) : <Loader/>}
+                </div>
+            </div>
+            <div className={classes.desktop}>{moviesTrigger !== 'query' ?
+                <Pagination setQuery={setQuery} query={query} numberPages={10}/> : ''}
+            </div>
+            <div className={classes.mobile}>{moviesTrigger !== 'query' ?
+                <Pagination setQuery={setQuery} query={query} numberPages={5}/> : ''}
+            </div>
+
         </div>
     );
 };

@@ -24,15 +24,20 @@ const Meny = () => {
             setValue('');}}>
             <NavLink to={'home'}>Home</NavLink>
             <NavLink to={'actors'}>Actors</NavLink>
-            <NavLink to={'movies'} onMouseMove={() => setValue('yes')}>Movies</NavLink>
-            <div >
-                {value && <ul className={classes.genres}>
-                    <li onClick={()=> {submitMovie({trigger:'top rated'})}}><b>Top Rated</b></li>
-                    <li onClick={()=>submitMovie({trigger:'popular'})}><b>Popular</b></li>
-                    <li onClick={()=>submitMovie({trigger:'now playing'})}><b>Now Playing</b></li>
-                    <li onMouseMove={() => setGenres('yes')}><b>Genres</b></li>
-                    {genres && <div className={classes.genres_item} onMouseLeave={() => setGenres('')}><MenyGenres submitMovie={submitMovie} /></div>}
-                </ul>}
+            <div>
+                <NavLink to={'movies'} onMouseMove={() => setValue('yes')}>Movies</NavLink>
+                <div>
+                    {value && <ul className={classes.genres}>
+                        <li onClick={() => {
+                            submitMovie({trigger: 'top rated'})
+                        }}><b>Top Rated</b></li>
+                        <li onClick={() => submitMovie({trigger: 'popular'})}><b>Popular</b></li>
+                        <li onClick={() => submitMovie({trigger: 'now playing'})}><b>Now Playing</b></li>
+                        <li onMouseMove={() => setGenres('yes')}><b>Genres</b></li>
+                        {genres && <div className={classes.genres_item} onMouseLeave={() => setGenres('')}><MenyGenres
+                            submitMovie={submitMovie}/></div>}
+                    </ul>}
+                </div>
             </div>
         </div>
     );

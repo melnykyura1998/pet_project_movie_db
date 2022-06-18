@@ -11,14 +11,25 @@ const MainLayaut = () => {
     const {pathname} = useLocation();
     const {login} = useSelector(state=>state.movies);
     return (
-        <div >
-            <div className={classes.header}>
-                <img src={logo} alt="logo"/>
-                <Meny/>
-                 <div className={classes.form}>{pathname.includes('actor')?<ActorForm/>:<MovieForm/>}</div>
-                <NavLink className={classes.user} to = {'login'}  >{!login? 'Login' : 'Logout'}</NavLink>
+        <div>
+            <div className={classes.desktop}>
+                <div className={classes.header}>
+                    <img src={logo} alt="logo"/>
+                    <Meny/>
+                    <div className={classes.form}>{pathname.includes('actor') ? <ActorForm/> : <MovieForm/>}</div>
+                    <NavLink className={classes.user} to={'login'}>{!login ? 'Login' : 'Logout'}</NavLink>
+                </div>
+                <Outlet/>
             </div>
-            <Outlet/>
+            <div className={classes.mobile}>
+                <div className={classes.header}>
+                    {/*<img src={logo} alt="logo"/>*/}
+                    <Meny/>
+                    <NavLink className={classes.user} to={'login'}>{!login ? 'Login' : 'Logout'}</NavLink>
+                    <div className={classes.form}>{pathname.includes('actor') ? <ActorForm/> : <MovieForm/>}</div>
+                </div>
+                <Outlet/>
+            </div>
         </div>
     );
 };

@@ -3,3 +3,18 @@
     flex-wrap: wrap;
     min-height: 600px;
 }
+.mobile{
+    display: none;
+}
+.desktop{
+    display: block;
+}
+
+@media screen and (max-width: 480px) {
+    .mobile {
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+}
