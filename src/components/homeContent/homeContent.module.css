@@ -5,32 +5,33 @@
 
 .title {
     font-weight: bolder;
-    font-size: 35px;
+    /*font-size: 35px;*/
+    font-size: 3vw;
     height: 30px;
-    box-sizing: border-box;
-    align-items: end;
+    /*box-sizing: border-box;*/
+    /*align-items: end;*/
     position: relative;
-    bottom: 50px;
+    bottom: 6vw;
     margin-left: 20px;
+
 }
 
 .img {
-    height: 500px;
+    /*height: 500px;*/
+    width: 100%;
     border-radius: 10px;
     box-shadow: black 0 0 9px 2px;
 }
 
 .img_wrapper {
-    height: 500px;
+    width: 70%;
     box-sizing: border-box;
-
+    margin: auto;
 }
-.button{
-    width: 30px;
 
-}
 h1{
-    margin: 0 50px 20px;
+    margin: 1vw 0 3.5vw;
+    font-size: 3.5vw;
 
 }
 .wrapper{
@@ -38,8 +39,13 @@ h1{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 a{
     text-decoration: none;
+}
+@media screen and (max-width: 480px){
+    .img_wrapper{
+        width: 90%;
+    }
 }

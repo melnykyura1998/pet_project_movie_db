@@ -32,21 +32,19 @@ const HomeContent = ({trends}) => {
     }
 
     return (
-        <div>
-            <div className={classes.wrapper}>
-                <div><h1>TRENDING NOW</h1>
+
+                <div className={classes.wrapper}>
+                    <h1>TRENDING NOW</h1>
                     <div className={classes.home_wrapper}>
                         <ArrowBackIosIcon fontSize={'large'} onClick={dec}/>
-                        <div className={classes.img_wrapper}>
-                            <img onClick={toMovie} className={classes.img} src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
+                        <div onClick={toMovie} className={classes.img_wrapper}>
+                            <img  className={classes.img} src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
                                  alt={original_title}/>
                             <div className={classes.title}>{original_title}</div>
                         </div>
                         <ArrowForwardIosIcon fontSize={'large'} onClick={inc}/>
                     </div>
                 </div>
-            </div>
-        </div>
     );
 };
 

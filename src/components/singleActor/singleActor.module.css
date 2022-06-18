@@ -5,6 +5,7 @@
 .actor_page {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 img {
@@ -20,4 +21,8 @@ img {
 }
 h3{
     margin: 25px;
+}
+.actor_film{
+    display: flex;
+    flex-wrap: wrap;
 }

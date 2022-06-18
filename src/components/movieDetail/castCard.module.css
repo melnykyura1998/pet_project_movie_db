@@ -14,6 +14,7 @@
 }
 .wrap{
     display: flex;
+    flex-wrap: wrap;
 }
 .movieDetail_wrap  * {
     margin-top: 20px;
@@ -22,6 +23,7 @@
     display: flex;
     align-items: end;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 img{
     border-radius: 10px;
@@ -47,15 +49,33 @@ select option{
      color: wheat;
  }
 .video_vrapper{
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    margin-top: 100px;
 }
-.video_vrapper > *{
-    margin: 10px;
+/*.video_vrapper > *{*/
+/*    margin: 10px;*/
+/*}*/
+/*iframe{*/
+/*    border: none;*/
+/*}*/
+/*.video{*/
+
+/*}*/
+/*iframe{*/
+/*    width: 80%;*/
+/*    height: 80%;*/
+/*}*/
+.frame_blc{
+    overflow:hidden;
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:30px;
+    height:0;
 }
-iframe{
+.frame_blc iframe {
+    position:absolute;
+    width:80%;
+    height:80%;
+    left:0;
+    top:0;
     border: none;
 }

@@ -5,6 +5,7 @@
     height: 50px;
     box-sizing: border-box;
     margin: 10px auto 0;
+    flex-wrap: wrap;
 }
 .header img{
     width: 130px;

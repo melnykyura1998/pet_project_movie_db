@@ -15,7 +15,7 @@ const MovieDetail = ({movieDetail}) => {
                     <h2>{title}</h2>
                     <img src={`http://image.tmdb.org/t/p/w300${poster_path}`} alt={title}/>
                 </div>
-                <div style={{marginLeft: '30px'}}>
+                <div style={{marginLeft: '30px',maxWidth:'800px'}}>
                      <div><b> budget:</b> {budget}</div>
                     <div><b>releas date:</b>  {release_date}</div>
                     {production_countries.length>0 && <div><b>country:</b> {production_countries[0].name}</div>}
@@ -27,7 +27,7 @@ const MovieDetail = ({movieDetail}) => {
                     <Rate/>
                 </div>
             </div>
-            <div className={classes.video_vrapper}>
+            <div >
                 <Getvideo id={id}/>
             </div>
             <div>

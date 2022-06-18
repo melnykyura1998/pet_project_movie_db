@@ -29,12 +29,12 @@ const Getvideo = ({id}) => {
     return (
         <div className={classes.video_vrapper} >
             {sortedvideos.length>0 && <h3>{sortedvideos[0].name}</h3>}
-            {sortedvideos.length>0 && <iframe src={` https://www.youtube.com/embed/${sortedvideos[0].key}`}
-                                        width={'800px'}
-                                        height={'470px'}
-                                        title={'video'}>
-
-            </iframe>}
+            {sortedvideos.length>0 && <div className={classes.frame_blc}>
+                <iframe src={` https://www.youtube.com/embed/${sortedvideos[0].key}`}
+                    width={'1600px'}
+                    height={'920px'}
+                        title={'video'}/>
+            </div> }
         </div>
     );
 };
