@@ -18,14 +18,14 @@ const MainLayaut = () => {
                     <img src={logo} alt="logo"/>
                     <Meny/>
                     <div className={classes.form}>{pathname.includes('actor') ? <ActorForm/> : <MovieForm/>}</div>
-                    <NavLink to={'login'}>{!user ? 'Login' : user.slice(0,3) }</NavLink>
+                    <NavLink to={'login'}>{!user ? 'Login' : user.slice(0,5) }</NavLink>
                 </div>
                 <Outlet/>
             </div>
             <div className={classes.mobile}>
                 <div className={classes.header}>
                     <Meny/>
-                    <NavLink to={'login'}>{!user ? 'Login' : user.slice(0,3)}</NavLink>
+                    <NavLink to={'login'}>{!user ? 'Login' : user.slice(0,5)}</NavLink>
                     <div className={classes.form_wrapper}>
                         <div className={classes.form}>{pathname.includes('actor') ? <ActorForm/> : <MovieForm/>}</div>
                     </div>
