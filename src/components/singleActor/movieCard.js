@@ -4,10 +4,10 @@ import classes from "./singleActor.module.css";
 
 const MovieCard = ({movie}) => {
 
-    const navigateto = useNavigate();
+    const navigate = useNavigate();
     const {poster_path, title,id:movieId} = movie;
     const toMovie = ()=>{
-        navigateto(`/movies/${movieId}`);
+        navigate(`/movies/${movieId}`);
     }
 
     return (

@@ -8,3 +8,7 @@ export * from './meny/meny';
 export * from './form/actorForm';
 export * from './pagination/pagination';
 export * from './login/login';
+export * from './homeContent/homeTrends';
+export * from './homeContent/homeTrendsSwipe';
+export * from './homeContent/homeTopRated';
+export * from './homeContent/homeTopRatedSwipe'

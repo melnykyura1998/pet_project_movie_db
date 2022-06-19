@@ -2,7 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     min-height: 600px;
+    justify-content: center;
 }
+
 .mobile{
     display: none;
 }
@@ -17,4 +19,5 @@
     .desktop{
         display: none;
     }
+
 }

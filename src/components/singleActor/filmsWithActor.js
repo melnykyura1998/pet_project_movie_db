@@ -9,7 +9,7 @@ const FilmsWithActor = ({actorId}) => {
     useEffect(()=>{
        actorsService.getFilm(actorId).then(({data})=>setCast(data.cast.slice(0,5).filter(item => item.poster_path)))
     },[actorId])
-    console.log(cast)
+
     return (
         <div >
             {cast.length > 0 ? <h3>Movies with the actor</h3>:''}

@@ -25,7 +25,7 @@ img{
     color: black;
     border-radius: 5px;
     border: none;
-    width: 50px;
+    /*width: 50px;*/
     height: 20px;
 }
 .header a[class='active'] {
@@ -51,7 +51,7 @@ br{
     }
     .header{
         width: 95%;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         display: flex;
         justify-content: center;
     }
@@ -63,4 +63,5 @@ br{
         display: flex;
         justify-content: center;
     }
+
 }

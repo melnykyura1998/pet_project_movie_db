@@ -9,8 +9,6 @@ import {Loader} from "../../UI";
 import {useSelector} from "react-redux";
 
 
-
-
 const Actors = () => {
 
     const {actorsByQuery,status} = useSelector(state => state.actors);
@@ -21,7 +19,7 @@ const Actors = () => {
     useEffect(() => {
         if (actorsByQuery) {
             setActors(actorsByQuery.filter(actor => actor.profile_path));
-            setPagination('')
+            setPagination('');
         }
     }, [actorsByQuery])
 
@@ -41,8 +39,10 @@ const Actors = () => {
                 <Pagination setQuery={setQuery} query={query} numberPages={5}/> }
             </div>
 
-            <div className={classes.cards_wrapper}>
-                {actors ? actors.map(actor => <Actor key={actor.id} actor={actor}/>) : <Loader/>}
+            <div>
+                <div className={classes.cards}>
+                    {actors ? actors.map(actor => <Actor key={actor.id} actor={actor}/>) : <Loader/>}
+                </div>
             </div>
             <div className={classes.desktop}>{pagination &&
                 <Pagination setQuery={setQuery} query={query} numberPages={10}/> }

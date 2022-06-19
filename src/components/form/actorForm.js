@@ -19,7 +19,7 @@ const ActorForm = () => {
     return (
         <form style={{display:'flex',alignItems:'center'}}>
             <input placeholder={'actor name'} ref={actorName}/>
-            <button onClick={search}>search</button>
+            <button style={{margin:'2px'}} onClick={search}>search</button>
         </form>
     );
 };

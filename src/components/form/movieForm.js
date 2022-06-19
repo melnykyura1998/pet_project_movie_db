@@ -22,7 +22,7 @@ const MovieForm = () => {
     return (
         <form style={{display:'flex',alignItems:'center'}}>
             <input placeholder={'movie name'} ref={movieName}/>
-            <button onClick={search}>search</button>
+            <button style={{margin:'2px'}} onClick={search}>search</button>
         </form>
     );
 };

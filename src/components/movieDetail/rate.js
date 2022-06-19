@@ -1,13 +1,12 @@
 import React from 'react';
 
 import {useLocation, useNavigate} from "react-router-dom";
-import {useSelector} from "react-redux";
+
 
 const Rate = () => {
 
     const {pathname} = useLocation();
     const navigate = useNavigate();
-    const {login} = useSelector(state=>state.movies);
     let rates=[];
 
     for(let i =1;i<11;i++){
@@ -15,14 +14,14 @@ const Rate = () => {
     }
 
     const evaluate = ()=>{
-        if(!login){
+        if(!localStorage.getItem('login')){
             navigate("/login",{state:pathname});
         }}
 
     return (
         <div>
             <button onClick={evaluate}>Rate</button>
-            {login && <select>{rates.map(rate=> <option key={rate}>{rate}</option>)}</select>}
+            {localStorage.getItem('login') && <select>{rates.map(rate=> <option key={rate}>{rate}</option>)}</select>}
         </div>
     );
 };

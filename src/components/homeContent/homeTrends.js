@@ -4,7 +4,7 @@ import { useNavigate} from "react-router-dom";
 import classes from "./homeContent.module.css";
 import {ArrowBackIosIcon,ArrowForwardIosIcon} from '../../UI/index';
 
-const HomeContent = ({trends}) => {
+const HomeTrends = ({trends}) => {
     const [counter, setCounter] = useState(0);
     const navigate = useNavigate();
 
@@ -22,17 +22,15 @@ const HomeContent = ({trends}) => {
         } else {
             setCounter(trends.length-1);
         }
-    }
+    };
 
     const {backdrop_path, original_title, id:movieId} = trends[counter];
-    console.log(trends[counter])
 
     const toMovie=()=>{
         navigate(`/movies/${movieId}`)
     }
 
     return (
-
                 <div className={classes.wrapper}>
                     <h1>TRENDING NOW</h1>
                     <div className={classes.home_wrapper}>
@@ -48,4 +46,4 @@ const HomeContent = ({trends}) => {
     );
 };
 
-export {HomeContent};
+export {HomeTrends};

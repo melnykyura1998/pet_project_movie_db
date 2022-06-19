@@ -1,17 +1,19 @@
-.wrapper{
+.formWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 200px;
 }
+
 input {
     border-radius: 7px;
     height: 22px;
     background: none;
-    margin: 3px 0 ;
+    margin: 3px 0;
 }
-button{
+
+button {
     margin: 10px 60px;
     background: #bdb9b9;
     color: black;
@@ -20,7 +22,24 @@ button{
     width: 50px;
     height: 20px;
 }
+
+.btn_LogOut button {
+    width: 150px;
+    height: 40px;
+}
+
+.myListWrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .btn_LogOut{
-    width: 200px;
-    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+.myList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
 }

@@ -1,7 +1,9 @@
-.cards_wrapper{
+
+.cards{
     display: flex;
     flex-wrap: wrap;
     min-height: 600px;
+    justify-content: center;
 }
 .mobile{
     display: none;
@@ -16,5 +18,10 @@
     }
     .desktop{
         display: none;
+    }
+    .cards_wrapper{
+        width: 350px;
+        display: flex;
+        justify-content: center;
     }
 }
