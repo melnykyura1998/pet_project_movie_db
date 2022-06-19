@@ -3,6 +3,7 @@
     height: 100px;
     border-radius: 50%;
     border: wheat dashed 2px;
+    animation: rotate 1s infinite linear;
 }
 
 .wrapper {
